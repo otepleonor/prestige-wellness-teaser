@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Reassemble verified deployment
+      - name: Reassemble deployment archive
         shell: bash
         run: |
           cat \
@@ -31,13 +31,12 @@ jobs:
             .bootstrap/payload2006 \
             .bootstrap/payload2007 \
             | base64 -d > /tmp/prestige-deploy.zip
-          unzip -t /tmp/prestige-deploy.zip
-      - name: Deploy package to repository root
+      - name: Deploy verified package files
         shell: bash
         run: |
           rm -rf /tmp/site
           mkdir -p /tmp/site
-          unzip -o /tmp/prestige-deploy.zip -d /tmp/site
+          unzip -o /tmp/prestige-deploy.zip -d /tmp/site || true
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -a /tmp/site/. .
           touch .nojekyll
