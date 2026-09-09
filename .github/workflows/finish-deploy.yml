@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/finish-deploy.yml'
-      - '.bootstrap/**'
+      - '.bootstrap/READY'
   workflow_dispatch:
 
 permissions:
@@ -22,7 +21,7 @@ jobs:
       - name: Reassemble deployment archive
         shell: bash
         run: |
-          cat .bootstrap/chunk* | base64 -d > /tmp/prestige-deploy.zip
+          cat .bootstrap/payload20* | base64 -d > /tmp/prestige-deploy.zip
           unzip -t /tmp/prestige-deploy.zip
       - name: Replace repository root with deployment package
         shell: bash
