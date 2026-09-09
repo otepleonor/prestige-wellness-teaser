@@ -1,0 +1,51 @@
+name: Repair Prestige Wellness deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.bootstrap/REPAIR_READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reassemble verified deployment
+        shell: bash
+        run: |
+          cat \
+            .bootstrap/payload2000 \
+            .bootstrap/payload2001 \
+            .bootstrap/payload2002 \
+            .bootstrap/payload2003 \
+            .bootstrap/payload2004 \
+            .bootstrap/payload2005 \
+            .bootstrap/payload2006 \
+            .bootstrap/payload2007 \
+            | base64 -d > /tmp/prestige-deploy.zip
+          unzip -t /tmp/prestige-deploy.zip
+      - name: Deploy package to repository root
+        shell: bash
+        run: |
+          rm -rf /tmp/site
+          mkdir -p /tmp/site
+          unzip -o /tmp/prestige-deploy.zip -d /tmp/site
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a /tmp/site/. .
+          touch .nojekyll
+      - name: Commit repaired deployment
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Repair Prestige Wellness deployment assets'
+          git push origin HEAD:main
