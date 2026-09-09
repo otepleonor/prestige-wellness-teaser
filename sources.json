@@ -1,0 +1,36 @@
+{
+  "prepared_on": "2026-09-09",
+  "project": "Independent Prestige Wellness BGC website concept",
+  "business_sources": [
+    {
+      "source": "Philippine Primer",
+      "url": "https://primer.com.ph/beauty-fashion/prestige-wellness/",
+      "published": "2026-01-06",
+      "accessed": "2026-09-09",
+      "used_for": ["Signature Massage 60/90/120 minute references: PHP 1800/2100/2699", "Lymphatic Massage 90/120 minute references: PHP 2100/2700", "Signature + Lymphatic 90 minute reference: PHP 2600", "Panorama Tower, 34th Street corner Lane A, BGC, Taguig", "+63 917 544 0808", "Listed 10 AM to midnight hours", "Facebook and Instagram links"],
+      "status": "Published references, not directly reconfirmed current business data"
+    },
+    {
+      "source": "Client-supplied Prestige Facebook waxing screenshot",
+      "published_visible": "2024-10-27",
+      "used_for": "Waxing area names and historical price references",
+      "status": "Current prices and durations need business confirmation"
+    },
+    {
+      "source": "Client-supplied Prestige Facebook VIP screenshot",
+      "published_visible": "2025-06-29",
+      "used_for": "Three package names, inclusions and historical totals",
+      "status": "Current availability and all package terms remain unconfirmed"
+    },
+    {
+      "source": "Client-supplied Facebook photo grid",
+      "published_visible": "Multiple creatives; not a single dated source",
+      "used_for": "Editorial art direction, beauty-image crops, advanced-aesthetics category context",
+      "status": "Image usage is for concept review; approved originals required for launch"
+    }
+  ],
+  "excluded": ["Unverified Google rating and review count", "Expired or undated introductory offers", "Unconfirmed medical procedure prices and outcomes", "Advertised savings combined with unrelated reference prices", "Unverified room counts and staff represented as real"],
+  "retrieval_limits": "Direct Google share-link and Facebook-page extraction was unsuccessful. Public remote interior-image downloads were not available in this execution environment. No complete Google Business Profile scrape is claimed.",
+  "demo_assumptions": ["3 fictional specialists", "3 fictional rooms, one for two guests", "15-minute reset buffer", "30-minute illustrative consultation", "20/30/45-minute illustrative waxing appointments", "60-day booking horizon", "Synthetic guest, appointment, and package data"],
+  "font_delivery": "Remote public Google Fonts stylesheet with system fallbacks; no font files distributed"
+}

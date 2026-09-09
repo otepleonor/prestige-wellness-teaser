@@ -1,0 +1,131 @@
+{
+  "results": [
+    {
+      "test": "Initial guest page renders with no JavaScript error",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Guest layout at eight viewport widths",
+      "result": "pass",
+      "detail": "320, 360, 390, 768, 820, 1024, 1440, 1920 px; no horizontal overflow"
+    },
+    {
+      "test": "Treatment explorer click and arrow-key navigation",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Two-guest booking and duration pricing",
+      "result": "pass",
+      "detail": "Two distinct staff and shared suite allocated; PHP 5,398 reference total"
+    },
+    {
+      "test": "Confirmation explicitly distinguishes demo from real reservation",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Calendar export",
+      "result": "pass",
+      "detail": "Labelled demo, tentative and transparent"
+    },
+    {
+      "test": "Guest booking appears in operations view",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Rescheduling revalidates room, staff, and closing-time buffer",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Cancel workflow requires confirmation and updates data",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "VIP booking places a hold without prematurely redeeming a session",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Completing a VIP visit redeems exactly one credit and removes the hold",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Reporting filters and chart totals reconcile",
+      "result": "pass",
+      "detail": "Today, 7 days, 30 days; excludes cancellations and credit redemptions from cash revenue"
+    },
+    {
+      "test": "Filtered report CSV export",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Catalogue pause removes a service from guest booking choices",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Unpriced facial enquiry does not fabricate a fee or appointment",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Escape dismissal restores keyboard focus to opener",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Consultation-first path",
+      "result": "pass",
+      "detail": "No medical procedure checkout; null fee; explicitly illustrative duration"
+    },
+    {
+      "test": "Scheduling invariants",
+      "result": "pass",
+      "detail": "Opening time, treatment length, reset buffer, staff and room required"
+    },
+    {
+      "test": "Native dialog keeps keyboard focus inside booking",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Mobile menu opens, navigates, and closes",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Mobile booking controls",
+      "result": "pass",
+      "detail": "Native 16px form text prevents Safari focus zoom; no horizontal overflow"
+    },
+    {
+      "test": "Reduced-motion preference disables movement and leaves content visible",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "All four operations views responsive at 390px",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "Reset demo action with confirmation",
+      "result": "pass",
+      "detail": "Passed"
+    },
+    {
+      "test": "JavaScript runtime errors across full test run",
+      "result": "pass",
+      "detail": "0"
+    }
+  ],
+  "javascript_errors": [],
+  "rendering_method": "Self-contained document rendered in headless Chromium with page.set_content; navigation/network unavailable in environment. Remote fonts blocked to verify fallback."
+}
