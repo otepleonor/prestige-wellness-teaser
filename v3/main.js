@@ -71,10 +71,10 @@
       });
     });
 
-    /* Ghost numerals: ~0.6x scroll speed with a gentle scale */
+    /* Ghost numerals: ~0.8x scroll speed with a gentle scale */
     $$('.ghost').forEach(ghost => {
       const scope = ghost.closest('[data-ghost-scope]') || ghost.closest('section');
-      const travel = () => (scope.offsetHeight + window.innerHeight) * 0.2;
+      const travel = () => (scope.offsetHeight + window.innerHeight) * 0.1;
       gsap.fromTo(ghost,
         { y: () => -travel(), scale: 0.96 },
         {
