@@ -214,7 +214,7 @@
   document.addEventListener('click',event=>{
     const target=event.target.closest('button,a');if(!target)return;
     if(target.dataset.close){event.preventDefault();closeDialog(target.dataset.close);return;}
-    if(target.dataset.book){event.preventDefault();openBooking(target.dataset.book,{evening:target.dataset.evening==='true'});return;}
+    if(target.dataset.book){event.preventDefault();if(!target.closest('#studio-view')){window.open('https://api.leadconnectorhq.com/booking/prestige-wellness-bgc-b5i4j5h9j9b','_blank','noopener');return;}openBooking(target.dataset.book,{evening:target.dataset.evening==='true'});return;}
     if(target.dataset.category){renderRitual(target.dataset.category);return;}
     if(target.dataset.ritual){renderRitual(target.dataset.ritual);return;}
     if(target.dataset.package){showPackage(target.dataset.package);return;}
