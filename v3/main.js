@@ -36,15 +36,26 @@
   };
   requestAnimationFrame(() => setProgress(0.14));
   const started = performance.now();
-  const heroImg = $('.hero__media img');
-  const imageReady = new Promise(resolve => {
-    if (!heroImg || heroImg.complete) return resolve();
-    heroImg.addEventListener('load', resolve, { once: true });
-    heroImg.addEventListener('error', resolve, { once: true });
+  const heroMedia = $('.hero__media video') || $('.hero__media img');
+  if (reduce && heroMedia instanceof HTMLVideoElement) {
+    heroMedia.pause();
+    heroMedia.removeAttribute('autoplay');
+  }
+  const mediaReady = new Promise(resolve => {
+    if (!heroMedia) return resolve();
+    if (heroMedia instanceof HTMLVideoElement) {
+      if (heroMedia.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) return resolve();
+      heroMedia.addEventListener('loadeddata', resolve, { once: true });
+      heroMedia.addEventListener('error', resolve, { once: true });
+      return;
+    }
+    if (heroMedia.complete) return resolve();
+    heroMedia.addEventListener('load', resolve, { once: true });
+    heroMedia.addEventListener('error', resolve, { once: true });
   }).then(() => setProgress(0.8));
   const fontsReady = (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => setProgress(0.45));
 
-  Promise.race([Promise.all([imageReady, fontsReady]), new Promise(r => setTimeout(r, 3500))]).then(() => {
+  Promise.race([Promise.all([mediaReady, fontsReady]), new Promise(r => setTimeout(r, 3500))]).then(() => {
     setProgress(1);
     const minimum = reduce ? 0 : 1100;
     const wait = Math.max(0, minimum - (performance.now() - started)) + (reduce ? 0 : 500);

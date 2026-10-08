@@ -59,7 +59,12 @@
 <main id="main">
 
   <section class="hero" id="home" aria-labelledby="hero-title">
-    <div class="hero__media"><img src="assets/hero-spa.webp" alt="A warm treatment room at golden hour, linen-draped bed beside tall windows over the BGC skyline" width="1672" height="941" fetchpriority="high"></div>
+    <div class="hero__media">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-spa.webp" aria-hidden="true" tabindex="-1">
+        <source src="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source src="assets/hero-desktop.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="hero__copy">
       <p class="eyebrow" data-hero-fade><i class="dot"></i>A different pace. Right here in BGC.</p>
