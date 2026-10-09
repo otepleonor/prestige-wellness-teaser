@@ -2,12 +2,285 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="refresh" content="0; url=v1/">
-  <link rel="canonical" href="v1/">
-  <title>Prestige Wellness BGC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF7F2">
+  <meta name="description" content="Prestige Wellness BGC brings massage, body rituals, skin care, beauty, and advanced aesthetics together in Bonifacio Global City.">
+  <link rel="canonical" href="https://hiprestige.meetgalley.com/">
+  <title>Prestige Wellness BGC &mdash; A little more you.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-spa.webp" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { document.documentElement.classList.add('loaded'); }, 5000);
+  </script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="main.js"></script>
 </head>
 <body>
-  <p><a href="v1/">v1</a> &middot; <a href="v2/">v2</a> &middot; <a href="v3/">v3</a></p>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <span class="logo preloader__logo"></span>
+    <p class="eyebrow preloader__sub">Bonifacio Global City</p>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+</div>
+
+<header class="nav">
+  <a href="#home" class="wordmark" aria-label="Prestige Wellness BGC home"><span class="logo" aria-hidden="true"></span></a>
+  <nav class="nav__links" aria-label="Main navigation">
+    <a class="roll" href="#rituals"><span class="roll__clip"><span class="roll__track"><span>The rituals</span><span aria-hidden="true">The rituals</span></span></span></a>
+    <a class="roll" href="#philosophy"><span class="roll__clip"><span class="roll__track"><span>Our philosophy</span><span aria-hidden="true">Our philosophy</span></span></span></a>
+    <a class="roll" href="#privileges"><span class="roll__clip"><span class="roll__track"><span>Privileges</span><span aria-hidden="true">Privileges</span></span></span></a>
+    <a class="roll" href="#visit"><span class="roll__clip"><span class="roll__track"><span>Find us</span><span aria-hidden="true">Find us</span></span></span></a>
+  </nav>
+  <a class="roll nav__book" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener"><span class="roll__clip"><span class="roll__track"><span>Book a moment</span><span aria-hidden="true">Book a moment</span></span></span></a>
+  <button class="roll nav__menu" type="button" aria-haspopup="dialog" aria-controls="mobile-menu"><span class="roll__clip"><span class="roll__track"><span>Menu</span><span aria-hidden="true">Menu</span></span></span></button>
+</header>
+
+<dialog id="mobile-menu" class="menu" aria-label="Menu">
+  <div class="menu__head"><span class="eyebrow">Prestige Wellness</span><button class="link" type="button" data-close>Close</button></div>
+  <nav aria-label="Mobile navigation">
+    <a href="#rituals">The rituals <span>01</span></a>
+    <a href="#philosophy">Our philosophy <span>02</span></a>
+    <a href="#privileges">Privileges <span>03</span></a>
+    <a href="#visit">Find us <span>04</span></a>
+  </nav>
+  <a class="pill pill--ink" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener"><i class="dot"></i>Book a moment</a>
+  <p class="menu__fine">Wellness &middot; Beauty &middot; Bonifacio Global City</p>
+</dialog>
+
+<main id="main">
+
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="hero__media">
+      <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-spa.webp" aria-hidden="true" tabindex="-1">
+        <source src="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source src="assets/hero-desktop.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="hero__copy">
+      <p class="eyebrow" data-hero-fade><i class="dot"></i>A different pace. Right here in BGC.</p>
+      <h1 id="hero-title"><span class="line"><span>Make room</span></span><span class="line"><span>for a little</span></span><span class="line"><span><em>more you.</em></span></span></h1>
+      <p class="hero__desc" data-hero-fade>Less rush. More ritual.<br>Wellness and beauty, with you at the center.</p>
+      <div class="hero__actions" data-hero-fade>
+        <a class="pill" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener"><i class="dot"></i>Reserve</a>
+        <a class="link link--light" href="#rituals">Find your moment</a>
+      </div>
+    </div>
+    <div class="hero__aside" data-hero-fade>
+      <p class="eyebrow hero__caption">The art of feeling like yourself.<br>Bonifacio Global City</p>
+      <a class="scroll-cue eyebrow" href="#philosophy">Scroll<span aria-hidden="true"></span></a>
+    </div>
+  </section>
+
+  <section class="chapter" id="philosophy" aria-labelledby="philosophy-title" data-reveal>
+    <div class="chapter__meta"><span class="eyebrow" data-r="0"><i class="dot"></i>The Prestige Philosophy</span><span class="eyebrow" data-r="0">01 / 05</span></div>
+    <div class="chapter__body philosophy">
+      <div class="head"><span class="ghost" aria-hidden="true">01</span><h2 id="philosophy-title" data-r="0">Not another thing to do.<br>A moment to <em>simply be.</em></h2></div>
+      <div class="philosophy__text">
+        <p class="lede" data-r="1">Some moments ask nothing of you.</p>
+        <p data-r="1">A pause from the noise. Time for a thoughtful treatment. Space to leave the everyday at the door, and return a little more yourself.</p>
+        <a class="link" href="#rituals" data-r="2">Discover your ritual</a>
+      </div>
+    </div>
+    <ul class="quiet-details" data-r="3" aria-label="What Prestige offers"><li>Massage &amp; bodywork</li><li>Skin &amp; beauty</li><li>Personal moments</li><li>Shared rituals</li></ul>
+  </section>
+
+  <section class="chapter chapter--dark collection" id="rituals" aria-labelledby="rituals-title">
+    <div class="collection__intro" data-reveal data-ghost-scope>
+      <div class="chapter__meta"><span class="eyebrow" data-r="0"><i class="dot"></i>The Treatment Collection</span><span class="eyebrow" data-r="0">02 / 05</span></div>
+      <div class="chapter__body collection__head">
+        <div class="head"><span class="ghost" aria-hidden="true">02</span><h2 id="rituals-title" data-r="0">How would you<br>like to <em>feel?</em></h2></div>
+        <p class="collection__sub" data-r="1">Start with a feeling.<br>Find the ritual that meets you there.</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <div class="story__media" aria-hidden="true">
+        <div class="story__slide is-active"><img src="assets/massage-body-rituals.webp" alt="" width="1024" height="1536" loading="lazy"><span class="eyebrow">The Restore edit</span></div>
+        <div class="story__slide"><img src="assets/facials-skin.webp" alt="" width="1024" height="1536" loading="lazy"><span class="eyebrow">The Renew edit</span></div>
+        <div class="story__slide"><img src="assets/advanced-aesthetics.webp" alt="" width="1024" height="1536" loading="lazy"><span class="eyebrow">The Refine edit</span></div>
+        <div class="story__slide story__slide--type"><span class="story__numeral">04</span><span class="eyebrow">The Smooth edit</span></div>
+      </div>
+
+      <div class="story__panels">
+        <article class="panel" data-panel="0" data-reveal aria-labelledby="p-restore">
+          <img class="panel__img" src="assets/massage-body-rituals.webp" alt="A therapist's hands smoothing folded linen beneath a dark basalt stone" width="1024" height="1536" loading="lazy">
+          <p class="eyebrow" data-r="0"><span class="panel__num">01</span>Restore &middot; Massage &amp; body</p>
+          <h3 id="p-restore" data-r="0">Massage &amp; Body Rituals</h3>
+          <p class="panel__lede" data-r="1">Massage and bodywork. Choose a little time to step away from the everyday.</p>
+          <dl class="spec" data-r="2">
+            <div class="spec__row"><dt>Prestige Signature Massage<small>A blend of Thai, Shiatsu, and Swedish techniques. Make the moment your own.</small></dt><dd class="spec__dur">60 &middot; 90 &middot; 120 min</dd><dd class="spec__price">&#8369;1,800 &middot; 2,100 &middot; 2,699</dd></div>
+            <div class="spec__row"><dt>Lymphatic Massage<small>A gentle massage option for your next quiet moment. Discuss suitability with the spa.</small></dt><dd class="spec__dur">90 &middot; 120 min</dd><dd class="spec__price">&#8369;2,100 &middot; 2,700</dd></div>
+            <div class="spec__row"><dt>Signature + Lymphatic<small>A combined 90-minute massage ritual.</small></dt><dd class="spec__dur">90 min</dd><dd class="spec__price">&#8369;2,600</dd></div>
+            <div class="spec__row"><dt>Full Body Scrub<small>An unhurried body-care ritual. Ask the team about options and current prices.</small></dt><dd class="spec__dur">45 min</dd><dd class="spec__price spec__price--quiet">To be confirmed</dd></div>
+          </dl>
+          <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="3">Reserve</a>
+        </article>
+
+        <article class="panel" data-panel="1" data-reveal aria-labelledby="p-renew">
+          <img class="panel__img" src="assets/facials-skin.webp" alt="A therapist's hand resting gently along a guest's jaw during a facial" width="1024" height="1536" loading="lazy">
+          <p class="eyebrow" data-r="0"><span class="panel__num">02</span>Renew &middot; Skin &amp; facials</p>
+          <h3 id="p-renew" data-r="0">Facials &amp; Skin</h3>
+          <p class="panel__lede" data-r="1">Skin care begins with understanding your skin. Explore available facial treatments with the team.</p>
+          <dl class="spec" data-r="2">
+            <div class="spec__row"><dt>HydraFacial / Skin Enquiry<small>Explore facial options with the team. Current treatment details, duration, and pricing need confirmation.</small></dt><dd class="spec__dur">Enquiry</dd><dd class="spec__price spec__price--quiet">To be confirmed</dd></div>
+          </dl>
+          <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="3">Reserve</a>
+        </article>
+
+        <article class="panel" data-panel="2" data-reveal aria-labelledby="p-refine">
+          <img class="panel__img" src="assets/advanced-aesthetics.webp" alt="A brushed-bronze facial tool resting on raw linen beside a dark stone tray" width="1024" height="1536" loading="lazy">
+          <p class="eyebrow" data-r="0"><span class="panel__num">03</span>Refine &middot; Advanced aesthetics</p>
+          <h3 id="p-refine" data-r="0">Advanced Aesthetics</h3>
+          <p class="panel__lede" data-r="1">Explore advanced aesthetics through a consultation first. This preview does not offer direct procedure bookings.</p>
+          <dl class="spec" data-r="2">
+            <div class="spec__row"><dt>Aesthetics Consultation<small>A conversation about your aesthetic interests, not a booking for a medical procedure. Suitability, practitioner credentials, treatment details, and fees require confirmation.</small></dt><dd class="spec__dur">30 min</dd><dd class="spec__price spec__price--quiet">To be confirmed</dd></div>
+          </dl>
+          <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="3">Reserve</a>
+        </article>
+
+        <article class="panel" data-panel="3" data-reveal aria-labelledby="p-smooth">
+          <p class="eyebrow" data-r="0"><span class="panel__num">04</span>Smooth &middot; Waxing &amp; beauty</p>
+          <h3 id="p-smooth" data-r="0">Waxing &amp; Beauty</h3>
+          <p class="panel__lede" data-r="1">Thoughtful finishing touches, at your own pace. Prices below are historical references.</p>
+          <dl class="spec" data-r="2">
+            <div class="spec__row"><dt>Eyebrows</dt><dd class="spec__dur">&mdash;</dd><dd class="spec__price">&#8369;299</dd></div>
+            <div class="spec__row"><dt>Underarm Waxing</dt><dd class="spec__dur">20 min</dd><dd class="spec__price">&#8369;399</dd></div>
+            <div class="spec__row"><dt>Full Legs Waxing</dt><dd class="spec__dur">45 min</dd><dd class="spec__price">&#8369;999</dd></div>
+            <div class="spec__row"><dt>Brazilian Waxing</dt><dd class="spec__dur">30 min</dd><dd class="spec__price">&#8369;1,199</dd></div>
+          </dl>
+          <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="3">Reserve</a>
+        </article>
+      </div>
+    </div>
+
+    <p class="price-note price-note--dark">Reference pricing, not a current offer. Final prices, treatment details, and availability require Prestige's confirmation.</p>
+  </section>
+
+  <section class="quote" aria-labelledby="skin-title" data-reveal>
+    <p class="eyebrow" data-r="0"><i class="dot"></i>Skin &amp; advanced aesthetics</p>
+    <h2 id="skin-title" data-r="0">Still you.<br><em>Beautifully considered.</em></h2>
+    <p class="quote__body" data-r="1">Begin with a conversation, not a procedure.<br>Explore your options with an individual consultation.</p>
+    <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="2">Explore a consultation</a>
+  </section>
+
+  <figure class="band">
+    <div class="band__media"><img src="assets/vip-room.webp" alt="A quiet private suite seen through an open door, afternoon light filtering through woven blinds" width="1536" height="1024" loading="lazy" data-parallax></div>
+    <figcaption class="eyebrow">Considered care. Your own pace.</figcaption>
+  </figure>
+
+  <section class="chapter" id="privileges" aria-labelledby="privileges-title" data-reveal>
+    <div class="chapter__meta"><span class="eyebrow" data-r="0"><i class="dot"></i>The Prestige Privileges</span><span class="eyebrow" data-r="0">03 / 05</span></div>
+    <div class="chapter__body privileges__head">
+      <div class="head"><span class="ghost" aria-hidden="true">03</span><h2 id="privileges-title" data-r="0">A little care.<br><em>A little more often.</em></h2></div>
+      <p class="privileges__sub" data-r="1">Make returning to yourself<br>a ritual, not an occasion.</p>
+    </div>
+    <div class="sheets" data-r="2">
+      <article class="sheet">
+        <p class="eyebrow">01 / The reset</p>
+        <h3>The Prestige<br>Reset</h3>
+        <p class="sheet__intro">A standing invitation to slow down.</p>
+        <dl class="sheet__spec">
+          <div><dt>120-minute massages of your choice</dt><dd>12</dd></div>
+        </dl>
+        <div class="sheet__price"><span class="eyebrow">Package</span><span class="sheet__num">&#8369;34,000</span></div>
+        <a class="link sheet__cta" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" aria-label="Explore The Prestige Reset">Explore</a>
+      </article>
+      <article class="sheet">
+        <p class="eyebrow">02 / The complete ritual</p>
+        <h3>The Prestige<br>Glow</h3>
+        <p class="sheet__intro">Time for yourself, from head to toe.</p>
+        <dl class="sheet__spec">
+          <div><dt>120-minute massages</dt><dd>12</dd></div>
+          <div><dt>45-minute body scrubs</dt><dd>6</dd></div>
+        </dl>
+        <div class="sheet__price"><span class="eyebrow">Package</span><span class="sheet__num">&#8369;51,500</span></div>
+        <a class="link sheet__cta" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" aria-label="Explore The Prestige Glow">Explore</a>
+      </article>
+      <article class="sheet">
+        <p class="eyebrow">03 / Body &amp; balance</p>
+        <h3>Body by<br>Prestige</h3>
+        <p class="sheet__intro">Bodywork, thoughtfully brought together.</p>
+        <dl class="sheet__spec">
+          <div><dt>120-minute massages</dt><dd>6</dd></div>
+          <div><dt>Wood-sculpting treatments</dt><dd>6</dd></div>
+        </dl>
+        <div class="sheet__price"><span class="eyebrow">Package</span><span class="sheet__num">&#8369;25,000</span></div>
+        <a class="link sheet__cta" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" aria-label="Explore Body by Prestige">Explore</a>
+      </article>
+    </div>
+    <p class="price-note" data-r="3">Package references from Prestige's June 29, 2025 artwork. Availability, validity, eligible services, and terms are not confirmed. No package purchases are accepted in this preview.</p>
+  </section>
+
+  <section class="chapter chapter--dark evening" id="evening" aria-labelledby="evening-title" data-reveal>
+    <div class="chapter__meta"><span class="eyebrow" data-r="0"><i class="dot"></i>Prestige, after hours</span><span class="eyebrow" data-r="0">04 / 05</span></div>
+    <div class="chapter__body evening__body">
+      <div class="evening__copy">
+        <p class="eyebrow" data-r="0">Your evening. Reclaimed.</p>
+        <div class="head"><span class="ghost" aria-hidden="true">04</span><h2 id="evening-title" data-r="0">The city slows down.<br><em>So can you.</em></h2></div>
+        <p class="evening__text" data-r="1">Let the last thing on your to-do list<br>be a moment that belongs only to you.</p>
+        <a class="pill pill--light" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener" data-r="2"><i class="dot"></i>Explore an evening ritual</a>
+      </div>
+    </div>
+    <div class="evening__foot" data-r="3"><span class="eyebrow">Take your time &nbsp;&middot;&nbsp; Listed hours &nbsp;/&nbsp; 10 AM &ndash; Midnight</span><span>Last appointment depends on treatment length. Confirm with the spa.</span></div>
+  </section>
+
+  <section class="chapter visit" id="visit" aria-labelledby="visit-title" data-reveal>
+    <div class="chapter__meta"><span class="eyebrow" data-r="0"><i class="dot"></i>We'll meet you here</span><span class="eyebrow" data-r="0">05 / 05</span></div>
+    <div class="chapter__body visit__grid">
+      <div class="visit__info">
+        <div class="head"><span class="ghost" aria-hidden="true">05</span><h2 id="visit-title" data-r="0">A world away.<br><em>Right in BGC.</em></h2></div>
+        <div class="visit__details" data-r="1">
+          <div>
+            <p class="eyebrow"><i class="dot"></i>Find Prestige</p>
+            <address>Panorama Tower<br>34th Street, corner Lane A<br>Bonifacio Global City, Taguig</address>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Prestige+Wellness+BGC+Panorama+Tower+Taguig" target="_blank" rel="noopener noreferrer">Open Google Maps</a>
+          </div>
+          <div>
+            <p class="eyebrow">Say hello</p>
+            <p><a class="plain" href="tel:+639175440808">+63 917 544 0808</a></p>
+            <p class="eyebrow visit__hours-label">Listed hours</p>
+            <p>10 AM &ndash; midnight<br><small>Confirm current hours directly.</small></p>
+            <p class="visit__social"><a class="link" href="https://www.instagram.com/prstgwellnessbgc/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="link" href="https://www.facebook.com/profile.php?id=61563363686619" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact" data-r="2">
+        <p class="eyebrow contact__eyebrow">A little time, just for you.</p>
+        <p class="contact__title">Your moment<br><em>starts here.</em></p>
+        <div class="contact__actions">
+          <a class="pill pill--ink" href="tel:+639175440808"><i class="dot"></i>Contact us</a>
+          <a class="link" href="https://linkprestige.meetgalley.com/booking/prestige-wellness-bgc-b5i4j5h9j9b" target="_blank" rel="noopener">Make time for yourself</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="logo footer__logo" role="img" aria-label="Prestige Wellness"></span>
+  <div class="footer__row">
+    <span class="eyebrow">Wellness &nbsp;&middot;&nbsp; Beauty &nbsp;&middot;&nbsp; BGC</span>
+    <nav class="footer__links" aria-label="Footer">
+      <a class="link link--light" href="#rituals">Massage &amp; body</a>
+      <a class="link link--light" href="#rituals">Skin &amp; aesthetics</a>
+      <a class="link link--light" href="#rituals">Beauty rituals</a>
+      <a class="link link--light" href="#home">Back to top</a>
+    </nav>
+  </div>
+  <p class="footer__fine">Prestige Wellness BGC. Online bookings open Prestige&rsquo;s secure booking page. Photography on this page is AI-generated and does not depict the Prestige facility, staff, clients, or treatments.</p>
+</footer>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ac740511cb832596c7c387a"></script>
 </body>
 </html>
