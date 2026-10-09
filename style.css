@@ -76,44 +76,35 @@ em { font-style: italic; font-weight: 300; }
 .nav {
   position: fixed; inset: 0 0 auto; z-index: 60;
   display: flex; align-items: center; gap: 24px;
-  min-height: 88px;
-  padding: 18px var(--g);
+  padding: 24px var(--g);
   color: var(--ivory);
-  background: rgba(28, 26, 23, .76);
-  border-bottom: 1px solid rgba(250, 247, 242, .18);
-  box-shadow: 0 18px 40px -32px rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: blur(18px) saturate(.82);
-  backdrop-filter: blur(18px) saturate(.82);
+  mix-blend-mode: difference;
 }
 .wordmark { display: block; margin-right: auto; }
 .logo {
-  display: block; width: 124px; aspect-ratio: 224 / 75;
+  display: block; width: 112px; aspect-ratio: 224 / 75;
   background: currentColor;
   -webkit-mask: url("assets/prestige-logo.png") center / contain no-repeat;
   mask: url("assets/prestige-logo.png") center / contain no-repeat;
 }
-.nav__links { display: flex; gap: clamp(20px, 2.4vw, 40px); }
+.nav__links { display: flex; gap: clamp(20px, 2.6vw, 44px); }
 .nav .roll {
   font-size: .75rem;
   font-weight: 600;
   letter-spacing: .16em;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, .42);
 }
 .nav__book {
-  margin-left: clamp(16px, 3vw, 48px);
-  padding: 14px 18px 13px;
-  border: 1px solid rgba(250, 247, 242, .82);
-  background: rgba(250, 247, 242, .96);
-  color: var(--ink);
-  text-shadow: none !important;
-  transition: background-color .3s ease, border-color .3s ease, color .3s ease, transform .3s ease;
+  margin-left: clamp(20px, 4vw, 64px);
+  padding: 13px 17px 12px;
+  border: 1px solid rgba(250, 247, 242, .72);
+  background: transparent;
+  color: var(--ivory);
+  transition: background-color .3s ease, border-color .3s ease;
 }
 .nav__book::after { display: none; }
 .nav__book:hover, .nav__book:focus-visible {
-  background: var(--bronze);
-  border-color: var(--bronze);
-  color: var(--ivory);
-  transform: translateY(-1px);
+  background: rgba(250, 247, 242, .12);
+  border-color: var(--ivory);
 }
 .nav .nav__menu { display: none; background: none; border: 0; padding: 0; cursor: pointer; }
 
@@ -372,7 +363,7 @@ em { font-style: italic; font-weight: 300; }
   .hero__aside .hero__caption { display: none; }
 }
 @media (max-width: 640px) {
-  .nav { min-height: 72px; padding: 14px var(--g); }
+  .nav { padding: 20px var(--g); }
   .nav .logo { width: 108px; }
   .nav__book { display: none; }
   .nav .nav__menu { display: inline-block; }
