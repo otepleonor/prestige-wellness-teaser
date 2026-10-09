@@ -10,6 +10,27 @@
 
   if (motion) gsap.registerPlugin(ScrollTrigger);
 
+  /* Keep the fixed navigation legible without altering the content beneath it. */
+  const nav = $('.nav');
+  const lightSurfaces = $$('.chapter:not(.chapter--dark), .quote');
+  let navToneFrame = 0;
+  const syncNavTone = () => {
+    navToneFrame = 0;
+    if (!nav) return;
+    const probeY = nav.getBoundingClientRect().height / 2;
+    const isOnLight = lightSurfaces.some(surface => {
+      const rect = surface.getBoundingClientRect();
+      return rect.top <= probeY && rect.bottom > probeY;
+    });
+    nav.classList.toggle('is-on-light', isOnLight);
+  };
+  const queueNavTone = () => {
+    if (!navToneFrame) navToneFrame = requestAnimationFrame(syncNavTone);
+  };
+  syncNavTone();
+  window.addEventListener('scroll', queueNavTone, { passive: true });
+  window.addEventListener('resize', queueNavTone);
+
   /* Hero intro: hide before the preloader lifts */
   const heroLines = $$('.hero .line > span');
   const heroFades = $$('.hero [data-hero-fade]');
@@ -62,6 +83,7 @@
     setTimeout(() => {
       doc.classList.add('loaded');
       playIntro();
+      syncNavTone();
       if (motion) ScrollTrigger.refresh();
     }, wait);
   });

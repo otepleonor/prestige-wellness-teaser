@@ -78,7 +78,9 @@ em { font-style: italic; font-weight: 300; }
   display: flex; align-items: center; gap: 24px;
   padding: 24px var(--g);
   color: var(--ivory);
+  transition: color .3s ease;
 }
+.nav.is-on-light { color: var(--ink); }
 .wordmark { display: block; margin-right: auto; }
 .logo {
   display: block; width: 112px; aspect-ratio: 224 / 75;
@@ -104,6 +106,15 @@ em { font-style: italic; font-weight: 300; }
 .nav__book:hover, .nav__book:focus-visible {
   background: rgba(250, 247, 242, .12);
   border-color: var(--ivory);
+}
+.nav.is-on-light .nav__book {
+  border-color: rgba(28, 26, 23, .5);
+  color: var(--ink);
+}
+.nav.is-on-light .nav__book:hover,
+.nav.is-on-light .nav__book:focus-visible {
+  background: rgba(28, 26, 23, .08);
+  border-color: var(--ink);
 }
 .nav .nav__menu { display: none; background: none; border: 0; padding: 0; cursor: pointer; }
 
